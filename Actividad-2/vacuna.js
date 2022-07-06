@@ -1,25 +1,84 @@
-let añoActual = 2022; //agregar funcion date para el añoActual.
-let añoNacimiento = 1990;
-let edad = añoActual - añoNacimiento;
-console.log("Edad:" + edad);
-// let edad = 32;
-let embarazada = false;
-let semanaGestacion = 10;
-let residenciaNorte = true; // agregar array.
-let vacuna = false;
+const residencia = [
+  //Estados norte
+  "Baja California",
+  "Sonora",
+  "Chihuahua",
+  "Coahuila",
+  "Nuevo León",
+  "Tamaulipas",
+  //Demas estados
+  "Aguascalientes",
+  "BajaCaliforniaSur",
+  "Campeche",
+  "Colima",
+  "Chiapas",
+  "Durango",
+  "DistritoFederal",
+  "Guanajuato",
+  "Guerrero",
+  "Hidalgo",
+  "Jalisco",
+  "México",
+  "Michoacán",
+  "Morelos",
+  "Nayarit",
+  "Oaxaca",
+  "Puebla",
+  "Querétaro",
+  "QuintanaRoo",
+  "SanLuisPotosí",
+  "Sinaloa",
+  "Tabasco",
+  "Tlaxcala",
+  "Veracruz",
+  "Yucatán",
+  "Zacatecas",
+];
 
-if (
-  edad >= 18 &&
-  embarazada == true &&
-  residenciaNorte == true &&
-  semanaGestacion >= 9
-) {
+const d = new Date();
+
+let añoActual = d.getFullYear();
+//Datos del Usuario
+let añoNacimiento = 1990;
+let embarazada = true;
+let semanaGestacion = 10;
+let residenciaActual = residencia[5];
+
+let vacuna = false;
+let edad = añoActual - añoNacimiento;
+
+if (embarazada == false) {
+  semanaGestacion = 0;
+  console.log("AñoActual:" + añoActual);
+  console.log("Edad:" + edad);
+  console.log("Embarazada:" + embarazada);
+  console.log("Semana de Gestacion:" + semanaGestacion);
+  console.log("Residencia:" + residenciaActual);
+} else {
+  console.log("AñoActual:" + añoActual);
+  console.log("Edad:" + edad);
+  console.log("Embarazada:" + embarazada);
+  console.log("Semana de Gestacion:" + semanaGestacion);
+  console.log("Residencia:" + residenciaActual);
+}
+
+if (edad >= 18 && embarazada == true && semanaGestacion >= 9) {
   vacuna = true;
   console.log("Puedes Vacunarte, grupo: Embarazadas");
-} else if (edad >= 30 && embarazada == false && residenciaNorte == true) {
+} else if (edad >= 30 && embarazada == false) {
   vacuna = true;
   console.log("Puedes Vacunarte, grupo: Adultos");
-} else if (edad >= 18 && embarazada == false && residenciaNorte == true) {
+} else if (
+  edad >= 18 &&
+  edad < 30 &&
+  embarazada == false &&
+  (residenciaActual == residencia[0] ||
+    residenciaActual == residencia[1] ||
+    residenciaActual == residencia[2] ||
+    residenciaActual == residencia[3] ||
+    residenciaActual == residencia[4] ||
+    residenciaActual == residencia[5])
+) {
   vacuna = true;
   console.log("Puedes Vacunarte, grupo: Jovenes");
 } else {
