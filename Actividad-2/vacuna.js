@@ -46,6 +46,7 @@ let residenciaActual = residencia[5];
 
 let vacuna = false;
 let edad = añoActual - añoNacimiento;
+// let length = residencia.length;
 
 if (embarazada == false) {
   semanaGestacion = 0;
@@ -56,6 +57,7 @@ console.log("Edad:" + edad);
 console.log("Embarazada:" + embarazada);
 console.log("Semana de Gestacion:" + semanaGestacion);
 console.log("Residencia:" + residenciaActual);
+// console.log("lenght array:" + length);
 
 if (edad >= 18 && embarazada == true && semanaGestacion >= 9) {
   vacuna = true;
