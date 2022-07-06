@@ -40,7 +40,7 @@ const d = new Date();
 let añoActual = d.getFullYear();
 //Datos del Usuario
 let añoNacimiento = 1990;
-let embarazada = true;
+let embarazada = false;
 let semanaGestacion = 10;
 let residenciaActual = residencia[5];
 
@@ -49,18 +49,13 @@ let edad = añoActual - añoNacimiento;
 
 if (embarazada == false) {
   semanaGestacion = 0;
-  console.log("AñoActual:" + añoActual);
-  console.log("Edad:" + edad);
-  console.log("Embarazada:" + embarazada);
-  console.log("Semana de Gestacion:" + semanaGestacion);
-  console.log("Residencia:" + residenciaActual);
-} else {
-  console.log("AñoActual:" + añoActual);
-  console.log("Edad:" + edad);
-  console.log("Embarazada:" + embarazada);
-  console.log("Semana de Gestacion:" + semanaGestacion);
-  console.log("Residencia:" + residenciaActual);
 }
+
+console.log("AñoActual:" + añoActual);
+console.log("Edad:" + edad);
+console.log("Embarazada:" + embarazada);
+console.log("Semana de Gestacion:" + semanaGestacion);
+console.log("Residencia:" + residenciaActual);
 
 if (edad >= 18 && embarazada == true && semanaGestacion >= 9) {
   vacuna = true;
