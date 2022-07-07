@@ -39,14 +39,15 @@ const d = new Date();
 
 let añoActual = d.getFullYear();
 //Datos del Usuario
-let añoNacimiento = 1990;
+let añoNacimiento = 2001;
 let embarazada = false;
 let semanaGestacion = 10;
-let residenciaActual = residencia[5];
+let residenciaActual = residencia[4];
 
 let vacuna = false;
 let edad = añoActual - añoNacimiento;
 // let length = residencia.length;
+// console.log(length);
 
 if (embarazada == false) {
   semanaGestacion = 0;
