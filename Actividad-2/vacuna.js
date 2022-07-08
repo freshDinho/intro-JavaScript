@@ -42,7 +42,8 @@ let añoActual = d.getFullYear();
 let añoNacimiento = 2001;
 let embarazada = false;
 let semanaGestacion = 10;
-let residenciaActual = residencia[4];
+let residenciaActual = residencia[31];
+let index = residencia.indexOf("Zacatecas");
 
 let vacuna = false;
 let edad = añoActual - añoNacimiento;
@@ -58,6 +59,7 @@ console.log("Edad:" + edad);
 console.log("Embarazada:" + embarazada);
 console.log("Semana de Gestacion:" + semanaGestacion);
 console.log("Residencia:" + residenciaActual);
+console.log("index:" + index);
 // console.log("lenght array:" + length);
 
 if (edad >= 18 && embarazada == true && semanaGestacion >= 9) {
