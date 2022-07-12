@@ -1,12 +1,5 @@
-function CelstoFahr(Celsius) {
-  let calc = (Celsius * 9) / 5 + 32;
-  return calc;
-}
+let CelstoFahr = (Celsius) => (Celsius * 9) / 5 + 32;
+let FahrtoCels = (Fahrenheit) => ((Fahrenheit - 32) * 5) / 9;
 
-function FahrtoCels(Fahrenheit) {
-  let calc = ((Fahrenheit - 32) * 5) / 9;
-  return calc;
-}
-
-console.log(`Fahrenheit: ${CelstoFahr(10)}`);
-console.log(`Celsius: ${FahrtoCels(49)}`);
+console.log(`Fahrenheit: ${CelstoFahr(10)}°F`);
+console.log(`Celsius: ${FahrtoCels(10)}°C`);
