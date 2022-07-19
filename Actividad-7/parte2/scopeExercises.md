@@ -1,10 +1,10 @@
-# JS Scoping exercises
+## JS Scoping exercises
 
 #### Nombre: Edgar Villa
 
 1. What’s the result of executing this code and why.
 
-```js
+```
 function test() {
   console.log(a);
   console.log(foo());
@@ -23,7 +23,7 @@ _undefined 2_
 
 2. What is result?
 
-```js
+```
 var a = 1;
 
 function someFunction(number) {
@@ -45,7 +45,7 @@ _la consola no regresa nada_
 
 3. What is the result of the following code? Explain your answer.
 
-```js
+```
 var a = 1;
 function foo() {
   var a = 2;
@@ -65,7 +65,7 @@ _2_
 
 4. What will you see in the console for the following example?
 
-```js
+```
 var a = 1;
 function b() {
   a = 10;

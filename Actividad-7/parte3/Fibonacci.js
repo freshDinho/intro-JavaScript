@@ -13,5 +13,5 @@ function fibonacci(x) {
     n2 = sum;
   }
 }
-
-fibonacci(10);
+let cantidad = 20;
+fibonacci(cantidad); //imprime la cantidad de numero que necesites

@@ -1,0 +1,9 @@
+.text-danger {
+  --bs-text-opacity: 1;
+  color: #00ff14 !important;
+}
+
+.thumb {
+  width: 130px;
+  height: 130px;
+}
