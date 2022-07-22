@@ -10,8 +10,8 @@ body {
 }
 
 .contorno {
-  background-color: rgb(85 88 94);
-  border: 7px solid #43464a;
+  background-color: rgb(42 45 52);
+  border: 7px solid #ffffff;
   height: 724px;
   width: 400px;
   padding: 20px;
@@ -19,13 +19,13 @@ body {
 }
 
 .Pantalla {
-  background-color: rgb(200, 202, 199);
+  background-color: rgb(146 163 127);
   height: 178px;
   width: 386px;
-  color: black;
+  color: white;
   margin-left: 0px;
   border-radius: 17px;
-  border: 7px solid #999999;
+  border: 7px solid #ffffff;
 }
 
 i {
@@ -56,9 +56,9 @@ i {
   display: grid;
   grid-template-columns: repeat(4, 3fr);
   grid-template-rows: repeat(6, 3fr);
-  gap: 1px;
+  gap: 8px;
   border-radius: 33px 33px 33px 33px;
-  background-color: ghostwhite;
+  background-color: #ffffff;
 }
 
 .fondo-pantalla {
