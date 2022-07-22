@@ -103,6 +103,8 @@ let digito1, digito2;
 clear.addEventListener("click", function () {
   console.clear();
   arregloDigitos = [];
+  digito1 = 0;
+  digito2 = 0;
   console.log(arregloDigitos);
   pantalla.textContent = "0";
   operacion = "";
@@ -123,6 +125,7 @@ borrar.addEventListener("click", function () {
 
 suma.addEventListener("click", function () {
   operacion = "+";
+  console.log(operacion);
   digito1 = Number(arregloDigitos.join(""));
   console.log("digito1:" + digito1);
   arregloDigitos = [];
@@ -133,6 +136,7 @@ suma.addEventListener("click", function () {
 
 resta.addEventListener("click", function () {
   operacion = "-";
+  console.log(operacion);
   digito1 = Number(arregloDigitos.join(""));
   console.log("digito1:" + digito1);
   arregloDigitos = [];
@@ -143,6 +147,7 @@ resta.addEventListener("click", function () {
 
 multiplicacion.addEventListener("click", function () {
   operacion = "*";
+  console.log(operacion);
   digito1 = Number(arregloDigitos.join(""));
   console.log(digito1);
   arregloDigitos = [];
@@ -153,6 +158,7 @@ multiplicacion.addEventListener("click", function () {
 
 division.addEventListener("click", function () {
   operacion = "/";
+  console.log(operacion);
   digito1 = Number(arregloDigitos.join(""));
   console.log(digito1);
   arregloDigitos = [];
@@ -162,14 +168,29 @@ division.addEventListener("click", function () {
 });
 
 let j = 0;
-
 negativo.addEventListener("click", function () {
-  operacion = "(-)";
-  arregloDigitos[i] = "-";
-  console.log(arregloDigitos);
-  i++;
-  digito1 = Number(arregloDigitos.join(""));
-  pantalla.textContent = arregloDigitos.join("");
+  // operacion = "(-)";
+  if (j == 0) {
+    arregloDigitos.unshift("-");
+
+    digito1 = Number(arregloDigitos.join(""));
+    console.log(arregloDigitos);
+    // console.log(typeof digito1);
+    console.log("digito1-negativo:" + digito1);
+
+    pantalla.textContent = arregloDigitos.join("");
+  } else if (j == 1) {
+    arregloDigitos.unshift("-");
+
+    digito2 = Number(arregloDigitos.join(""));
+    console.log(arregloDigitos);
+    // console.log(typeof digito1);
+    console.log("digito2-negativo:" + digito2);
+
+    pantalla.textContent = arregloDigitos.join("");
+    j = 0;
+  }
+  j++;
 });
 
 let cont = 0;
@@ -188,7 +209,9 @@ point.addEventListener("click", function () {
 });
 
 equal.addEventListener("click", function () {
+  console.log("=");
   if (operacion == "+") {
+    console.log("digito1:" + digito1);
     digito2 = Number(arregloDigitos.join(""));
     console.log("digito2:" + digito2);
     arregloDigitos = [];
@@ -200,8 +223,9 @@ equal.addEventListener("click", function () {
     pantalla.textContent = arregloDigitos.join("");
     operacion = "";
   } else if (operacion == "-") {
+    console.log("digito1:" + digito1);
     digito2 = Number(arregloDigitos.join(""));
-    console.log(digito2);
+    console.log("digito2:" + digito2);
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 - digito2;
@@ -211,8 +235,9 @@ equal.addEventListener("click", function () {
     pantalla.textContent = arregloDigitos.join("");
     operacion = "";
   } else if (operacion == "*") {
+    console.log("digito1:" + digito1);
     digito2 = Number(arregloDigitos.join(""));
-    console.log(digito2);
+    console.log("digito2:" + digito2);
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 * digito2;
@@ -222,8 +247,9 @@ equal.addEventListener("click", function () {
     pantalla.textContent = arregloDigitos.join("");
     operacion = "";
   } else if (operacion == "/") {
+    console.log("digito1:" + digito1);
     digito2 = Number(arregloDigitos.join(""));
-    console.log(digito2);
+    console.log("digito2:" + digito2);
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 / digito2;
