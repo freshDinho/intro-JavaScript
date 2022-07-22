@@ -73,3 +73,5 @@ console.log(
   myObject2.Car,
   myObject2.Pet
 );
+
+console.log("Pet" in myObject2);

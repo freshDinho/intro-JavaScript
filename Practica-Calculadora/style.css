@@ -1,0 +1,230 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgb(37, 37, 37);
+  /* border: 1px solid red; */
+  height: 99vh;
+  margin: 0;
+  padding: 0;
+}
+
+.contorno {
+  background-color: rgb(85 88 94);
+  border: 7px solid #43464a;
+  height: 724px;
+  width: 400px;
+  padding: 20px;
+  border-radius: 32px;
+}
+
+.Pantalla {
+  background-color: rgb(200, 202, 199);
+  height: 178px;
+  width: 386px;
+  color: black;
+  margin-left: 0px;
+  border-radius: 17px;
+  border: 7px solid #999999;
+}
+
+i {
+  margin-left: 328px;
+  /* margin-top: -14px; */
+  font-size: 31px;
+  /* height: 19px; */
+  /* border: 2px solid blueviolet; */
+}
+.contenido-pantalla {
+  text-align: right;
+  margin-top: 63px;
+  height: 50px;
+  width: 350px;
+  margin-left: 0px;
+  /* margin-right: -14px; */
+  font-size: 40px;
+  font-family: "Secular One", sans-serif;
+  /* border: 1px solid blue; */
+}
+
+.teclas {
+  margin-top: 30px;
+  border: 7px solid rgb(255 255 255);
+  height: 484px;
+  width: 385px;
+  margin-left: 0px;
+  display: grid;
+  grid-template-columns: repeat(4, 3fr);
+  grid-template-rows: repeat(6, 3fr);
+  gap: 1px;
+  border-radius: 33px 33px 33px 33px;
+  background-color: ghostwhite;
+}
+
+.fondo-pantalla {
+  background-color: blue;
+  width: 440px;
+  height: 290px;
+  margin-top: -39px;
+  margin-left: -20px;
+  padding: 0px;
+}
+
+button {
+  border: 0px solid white;
+  font-size: 40px;
+  font-family: "Secular One", sans-serif;
+  color: white;
+}
+
+#negativo {
+  background-color: rgb(239, 65, 54);
+  border-top-left-radius: 25px;
+}
+
+#CE {
+  background-color: rgb(78, 84, 98);
+}
+
+#C {
+  background-color: rgb(78, 84, 98);
+}
+
+#borrar {
+  background-color: rgb(78, 84, 98);
+  border-top-right-radius: 25px;
+}
+
+#point {
+  background-color: rgb(107, 124, 140);
+}
+
+#equal {
+  background-color: rgb(42, 45, 52);
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+}
+
+#suma {
+  background-color: rgb(78, 84, 98);
+}
+
+#resta {
+  background-color: rgb(78, 84, 98);
+}
+
+#multiplicacion {
+  background-color: rgb(78, 84, 98);
+}
+
+#division {
+  background-color: rgb(78, 84, 98);
+}
+
+#number1 {
+  background-color: rgb(107, 124, 140);
+}
+
+#number2 {
+  background-color: rgb(107, 124, 140);
+}
+#number3 {
+  background-color: rgb(107, 124, 140);
+}
+#number4 {
+  background-color: rgb(107, 124, 140);
+}
+#number5 {
+  background-color: rgb(107, 124, 140);
+}
+#number6 {
+  background-color: rgb(107, 124, 140);
+}
+#number7 {
+  background-color: rgb(107, 124, 140);
+}
+#number8 {
+  background-color: rgb(107, 124, 140);
+}
+#number9 {
+  background-color: rgb(107, 124, 140);
+}
+#number0 {
+  background-color: rgb(107, 124, 140);
+}
+#non-btn {
+  background-color: rgb(107, 124, 140);
+}
+
+/* hovers */
+
+#number1:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number2:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number3:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number4:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number5:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number6:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number7:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number8:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number9:hover {
+  background-color: rgb(68, 79, 90);
+}
+#number0:hover {
+  background-color: rgb(68, 79, 90);
+}
+#point:hover {
+  background-color: rgb(68, 79, 90);
+}
+#non-btn:hover {
+  background-color: rgb(68, 79, 90);
+}
+
+#suma:hover {
+  background-color: rgb(44, 48, 56);
+}
+#resta:hover {
+  background-color: rgb(44, 48, 56);
+}
+#multiplicacion:hover {
+  background-color: rgb(44, 48, 56);
+}
+
+#division:hover {
+  background-color: rgb(44, 48, 56);
+}
+
+#negativo:hover {
+  background-color: rgb(108, 30, 24);
+}
+
+#CE:hover {
+  background-color: rgb(37, 40, 47);
+}
+
+#C:hover {
+  background-color: rgb(37, 40, 47);
+}
+
+#borrar:hover {
+  background-color: rgb(37, 40, 47);
+}
+
+#equal:hover {
+  background-color: rgb(19, 21, 24);
+}

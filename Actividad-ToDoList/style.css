@@ -1,0 +1,27 @@
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 99vw;
+  height: 98vh;
+  margin: 0;
+  padding: 0;
+  border: 1px solid red;
+}
+
+.header {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid red;
+  width: 500px;
+  height: 500px;
+}
+
+table,
+th,
+td {
+  margin-top: 20px;
+  border: 1px solid red;
+}
