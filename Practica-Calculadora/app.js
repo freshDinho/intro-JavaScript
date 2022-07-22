@@ -20,28 +20,25 @@ let clear = document.getElementById("C");
 let clearError = document.getElementById("CE");
 let equal = document.getElementById("equal");
 let borrar = document.getElementById("borrar");
-
-let arregloDigitos = [0];
-let i = 0;
-
 let pantalla = document.getElementById("contenido-pantalla");
 
+let arregloDigitos = [];
+let i = 0;
+
 numero0.addEventListener("click", function () {
-  arregloDigitos[i] = "0";
+  arregloDigitos[i] = 0;
   i++;
   console.log(arregloDigitos);
-  pantalla.textContent = arregloDigitos.join("");
 });
 
 numero1.addEventListener("click", function () {
-  arregloDigitos[i] = "1";
+  arregloDigitos[i] = 1;
   i++;
   console.log(arregloDigitos);
-  pantalla.textContent = arregloDigitos.join("");
 });
 
 numero2.addEventListener("click", function () {
-  arregloDigitos[i] = "2";
+  arregloDigitos[i] = 2;
   i++;
   console.log(arregloDigitos);
   pantalla.textContent = arregloDigitos.join("");
@@ -229,7 +226,7 @@ equal.addEventListener("click", function () {
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 - digito2;
-    console.log("Suma: " + Total);
+    console.log("Total: " + Total);
     arregloDigitos = [Total];
     console.log(arregloDigitos);
     pantalla.textContent = arregloDigitos.join("");
@@ -241,6 +238,7 @@ equal.addEventListener("click", function () {
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 * digito2;
+    Total = Number.parseFloat(Total).toFixed(12);
     console.log("Suma: " + Total);
     arregloDigitos = [Total];
     console.log(arregloDigitos);
@@ -253,6 +251,7 @@ equal.addEventListener("click", function () {
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 / digito2;
+    Total = Number.parseFloat(Total).toFixed(9);
     console.log("Suma: " + Total);
     arregloDigitos = [Total];
     console.log(arregloDigitos);
