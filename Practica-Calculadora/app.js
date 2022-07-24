@@ -22,19 +22,21 @@ let equal = document.getElementById("equal");
 let borrar = document.getElementById("borrar");
 let pantalla = document.getElementById("contenido-pantalla");
 
-let arregloDigitos = [];
+let arregloDigitos = [0];
 let i = 0;
 
 numero0.addEventListener("click", function () {
   arregloDigitos[i] = 0;
   i++;
   console.log(arregloDigitos);
+  pantalla.textContent = arregloDigitos.join("");
 });
 
 numero1.addEventListener("click", function () {
   arregloDigitos[i] = 1;
   i++;
   console.log(arregloDigitos);
+  pantalla.textContent = arregloDigitos.join("");
 });
 
 numero2.addEventListener("click", function () {
@@ -238,7 +240,7 @@ equal.addEventListener("click", function () {
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 * digito2;
-    Total = Number.parseFloat(Total).toFixed(12);
+    // Total = Number.parseFloat(Total).toFixed(3);
     console.log("Suma: " + Total);
     arregloDigitos = [Total];
     console.log(arregloDigitos);
@@ -251,7 +253,7 @@ equal.addEventListener("click", function () {
     arregloDigitos = [];
     console.log(arregloDigitos);
     Total = digito1 / digito2;
-    Total = Number.parseFloat(Total).toFixed(9);
+    // Total = Number.parseFloat(Total).toFixed(12);
     console.log("Suma: " + Total);
     arregloDigitos = [Total];
     console.log(arregloDigitos);
