@@ -7,11 +7,14 @@ let pantalla6 = document.getElementById("Pantalla6");
 let pantalla7 = document.getElementById("Pantalla7");
 let pantalla8 = document.getElementById("Pantalla8");
 let pantalla9 = document.getElementById("Pantalla9");
+
 let retiro = document.getElementById("retiro");
 let deposito = document.getElementById("deposito");
 let consulta = document.getElementById("consulta");
-let btnBorrar = document.getElementById("BorrarLocalStorage");
 let iniciarSesion = document.getElementById("iniciar-sesion");
+let cerrarSesion = document.getElementById("cerrarSesion");
+
+let btnBorrar = document.getElementById("BorrarLocalStorage");
 
 var cuentas = [
   { nombre: "Mali", password: 1234, saldo: 200 },
@@ -34,32 +37,62 @@ iniciarSesion.addEventListener("click", function () {
 
     if (username == cuentas[i].nombre) {
       if (password == cuentas[i].password) {
+        cerrarSesion.textContent = "Cerrar Sesion";
         retiro.textContent = "Retiro";
-        pantalla1.textContent = "";
+        deposito.textContent = "Deposito";
+        consulta.textContent = "Consulta";
+        pantalla1.style.fontSize = "50px";
+        pantalla1.textContent = "Bienvenido!" + " " + username;
         pantalla2.textContent = "";
-        pantalla3.textContent = "";
+        pantalla3.style.fontSize = "50px";
+        pantalla3.textContent = "¿Que quieres hacer?";
         pantalla4.textContent = "";
-        pantalla5.textContent =
-          "Bienvenido!" + " " + username + " " + "saldo: " + cuentas[i].saldo;
+        pantalla5.textContent = "selecciona alguna de las opciones en pantalla";
         pantalla6.textContent = "";
         pantalla7.textContent = "";
         pantalla8.textContent = "";
         pantalla9.textContent = "";
+
         pantalla7.style.color = "white";
         break;
       } else {
         // pantalla7.style.color = "white";
-        pantalla7.textContent = "Usuario o Contraseña incorrecta";
+        pantalla7.textContent = "Intentar de nuevo";
         console.log("No es la contraseña");
       }
     } else {
       pantalla7.style.color = "red";
-      pantalla7.textContent = "Usuario o Contraseña incorrecta";
+      pantalla7.textContent = "Intentar de nuevo";
       console.log("No es el usario");
     }
   }
 });
 
+retiro.addEventListener("click", function () {
+  pantalla1.textContent = "";
+  pantalla2.textContent = "";
+  pantalla3.textContent = "";
+  pantalla4.textContent = "";
+  pantalla5.textContent = "";
+  pantalla6.textContent = "";
+  pantalla7.textContent = "";
+  pantalla8.textContent = "";
+  pantalla9.textContent = "";
+});
+
 btnBorrar.addEventListener("click", function () {
   localStorage.clear();
+  pantalla1.textContent = "";
+  pantalla2.textContent = "";
+  pantalla3.textContent = "";
+  pantalla4.textContent = "";
+  pantalla5.textContent = "";
+  pantalla6.textContent = "";
+  pantalla7.textContent = "";
+  pantalla8.textContent = "";
+  pantalla9.textContent = "";
+});
+
+cerrarSesion.addEventListener("click", function () {
+  window.location.reload();
 });
