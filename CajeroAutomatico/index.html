@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
+</head>
+
+<body>
+    <div class="container-fluid border p-5 mt-5 bg-light flex-row-reverse">
+        <div class="row border border-danger py-5 bg-secondary d-flex flex-md-wrap justify-content-center ">
+            <div class="col-2 p-2 bg-secondary border border-danger">
+                <button type="button" class="col-12 mb-3 my-5 btn btn-dark btn-lg text-center">#</button>
+                <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">#</button>
+                <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">#</button>
+                <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">#</button>
+            </div>
+            <div class="col-7 p-3 bg-secondary border border-danger" style="height: 700px;"
+                class="col-12 bg-light border border-danger">
+                <div class="col-12 p-3 mt-4 border text-center" style="height: 600px;">
+                    <p id="Pantalla1"></p>
+                    <p id="Pantalla2"></p>
+                    <p id="Pantalla3">Inicia Sesion</p>
+                    <p id="Pantalla4"><input type="text" placeholder="username" id="username" style="width: 120px;">
+                    </p>
+                    <p id="Pantalla5"><input type="password" placeholder="password" id="password" style="width: 120px;">
+                    </p>
+                    <p id="Pantalla6"><button type="button" id="iniciar-sesion"" class=" col-3 mb-3 btn btn-primary
+                            text-center">Iniciar
+                            sesion</button></p>
+                    <p id="Pantalla7"></p>
+                    <p id="Pantalla8"></p>
+                    <p id="Pantalla9"></p>
+                </div>
+                </>
+            </div>
+            <div class="col-2 p-2 bg-secondary border border-danger">
+                <button type="button" id="retiro" class="col-12 mb-3 mt-5 btn btn-dark btn-lg text-center">-</button>
+
+                <button type="button" id="deposito"
+                    class="col-12 mb-3 btn btn-dark btn-lg text-center">Deposito</button>
+                <button type="button" id="consulta"
+                    class="col-12 mb-3 btn btn-dark btn-lg text-center">Consulta</button>
+                <button type="button" id="BorrarLocalStorage"
+                    class="col-12 mb-3 btn btn-dark btn-lg text-center">BorrarLocalStorage</button>
+            </div>
+        </div>
+    </div>
+    <script src="app.js"></script>
+</body>
+
+</html>
