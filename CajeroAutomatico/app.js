@@ -26,7 +26,7 @@ cerrarSesion.disabled = true;
 //   { nombre: "Maui", password: 0000, saldo: 67 },
 // ];
 
-var cuentas = [
+const cuentas = [
   { nombre: "Mali", password: 1234 },
   { nombre: "Gera", password: 4321 },
   { nombre: "Maui", password: 0000 },
@@ -326,7 +326,7 @@ iniciarSesion.addEventListener("click", function () {
           pantalla5.textContent = "$ ";
           pantalla5.insertAdjacentHTML(
             "beforeend",
-            '<input id="input" type="number" style="width: 80px;">'
+            '<input id="input" type="text" style="width: 80px;">'
           );
           pantalla6.textContent = "\u2003";
           pantalla6.insertAdjacentHTML(
