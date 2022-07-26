@@ -210,6 +210,7 @@ iniciarSesion.addEventListener("click", function () {
             if (isNaN(input.value) == true) {
               pantalla7.style.color = "red";
               pantalla7.textContent = "Ingrese un numero valido";
+              input.value = "";
               // console.log("Es String");
             } else {
               // console.log("Es Numero");
@@ -230,7 +231,7 @@ iniciarSesion.addEventListener("click", function () {
                 pantalla1.style.color = "white";
                 pantalla2.style.color = "white";
                 pantalla3.style.color = "white";
-                pantalla4.style.color = "green";
+                pantalla4.style.color = "red";
                 pantalla5.style.color = "white";
                 pantalla6.style.color = "yellow";
                 pantalla7.style.color = "white";
@@ -257,7 +258,7 @@ iniciarSesion.addEventListener("click", function () {
                 pantalla2.textContent = "\u2003";
                 pantalla4.textContent = "Transferencia fallida!";
                 pantalla5.textContent =
-                  "La cuenta ya alcanzo su limite de saldo" + deposito;
+                  "La cuenta ya alcanzo su limite de saldo";
                 pantalla6.textContent = "Saldo Total: " + saldo;
                 pantalla7.textContent = "\u2003";
                 pantalla8.textContent = "\u2003";
@@ -358,6 +359,7 @@ iniciarSesion.addEventListener("click", function () {
             if (isNaN(input.value) == true) {
               pantalla7.style.color = "red";
               pantalla7.textContent = "Ingrese un numero valido";
+              input.value = "";
               // console.log("Es String");
             } else {
               // console.log("Es Numero");
@@ -379,7 +381,7 @@ iniciarSesion.addEventListener("click", function () {
                 pantalla1.style.color = "white";
                 pantalla2.style.color = "white";
                 pantalla3.style.color = "white";
-                pantalla4.style.color = "green";
+                pantalla4.style.color = "red";
                 pantalla5.style.color = "white";
                 pantalla6.style.color = "yellow";
                 pantalla7.style.color = "white";
