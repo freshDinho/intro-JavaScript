@@ -74,16 +74,30 @@ iniciarSesion.addEventListener("click", function () {
         deposito.textContent = "Deposito";
         consultar.textContent = "Consultar";
 
+        pantalla1.style.color = "white";
+        pantalla2.style.color = "white";
+        pantalla3.style.color = "red";
+        pantalla4.style.color = "white";
+        pantalla5.style.color = "white";
+        pantalla6.style.color = "white";
         pantalla7.style.color = "white";
+        pantalla8.style.color = "white";
+        pantalla9.style.color = "white";
 
-        pantalla1.style.fontSize = "50px";
+        pantalla1.style.fontSize = "15px";
+        pantalla2.style.fontSize = "15px";
         pantalla3.style.fontSize = "50px";
-        pantalla5.style.fontSize = "15px";
+        pantalla4.style.fontSize = "30px";
+        pantalla5.style.fontSize = "20px";
+        pantalla6.style.fontSize = "15px";
+        pantalla7.style.fontSize = "15px";
+        pantalla8.style.fontSize = "15px";
+        pantalla9.style.fontSize = "15px";
 
-        pantalla1.textContent = "Bienvenido!" + " " + username;
-        pantalla2.textContent = "\u2003";
-        pantalla3.textContent =
+        pantalla1.textContent =
           "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+        pantalla2.textContent = "\u2003";
+        pantalla3.textContent = "Bienvenido!" + " " + cuentas[persona].nombre;
         pantalla4.textContent = "¿Que quieres hacer?";
         pantalla5.textContent = "selecciona alguna de las opciones en pantalla";
         pantalla6.textContent = "\u2003";
@@ -93,18 +107,35 @@ iniciarSesion.addEventListener("click", function () {
 
         consultar.addEventListener("click", function () {
           console.log("Persona: " + persona);
-          pantalla3.style.fontSize = "30px";
-          pantalla4.style.fontSize = "30px";
-          pantalla4.style.color = "white";
 
-          pantalla1.textContent = "\u2003";
-          pantalla2.textContent = "\u2003";
-          pantalla3.textContent =
+          pantalla1.style.color = "white";
+          pantalla2.style.color = "white";
+          pantalla3.style.color = "white";
+          pantalla4.style.color = "red";
+          pantalla5.style.color = "white";
+          pantalla6.style.color = "white";
+          pantalla7.style.color = "white";
+          pantalla8.style.color = "white";
+          pantalla9.style.color = "white";
+
+          pantalla1.style.fontSize = "15px";
+          pantalla2.style.fontSize = "15px";
+          pantalla3.style.fontSize = "15px";
+          pantalla4.style.fontSize = "30px";
+          pantalla5.style.fontSize = "15px";
+          pantalla6.style.fontSize = "15px";
+          pantalla7.style.fontSize = "15px";
+          pantalla8.style.fontSize = "15px";
+          pantalla9.style.fontSize = "15px";
+
+          pantalla1.textContent =
             "CuentaActual: " +
             cuentas[persona].nombre +
             " " +
             "Saldo: " +
             saldo;
+          pantalla3.textContent = "\u2003";
+          pantalla2.textContent = "\u2003";
           pantalla4.textContent = "Saldo Actual: " + saldo;
           pantalla5.textContent = "\u2003";
           pantalla6.textContent = "\u2003";
@@ -114,28 +145,45 @@ iniciarSesion.addEventListener("click", function () {
         });
 
         deposito.addEventListener("click", function () {
-          pantalla3.style.fontSize = "30px";
+          pantalla1.style.color = "white";
+          pantalla2.style.color = "white";
+          pantalla3.style.color = "white";
+          pantalla4.style.color = "red";
+          pantalla5.style.color = "white";
+          pantalla6.style.color = "white";
+          pantalla7.style.color = "white";
+          pantalla8.style.color = "white";
+          pantalla9.style.color = "white";
+
+          pantalla1.style.fontSize = "15px";
+          pantalla2.style.fontSize = "15px";
+          pantalla3.style.fontSize = "15px";
           pantalla4.style.fontSize = "30px";
+          pantalla5.style.fontSize = "20px";
+          pantalla6.style.fontSize = "15px";
+          pantalla7.style.fontSize = "15px";
+          pantalla8.style.fontSize = "15px";
+          pantalla9.style.fontSize = "15px";
 
           // let input = document.createElement("input");
-          pantalla1.textContent = "\u2003";
-          pantalla2.textContent = "\u2003";
-          pantalla3.textContent =
+          pantalla1.textContent =
             "CuentaActual: " +
             cuentas[persona].nombre +
             " " +
             "Saldo: " +
             saldo;
+          pantalla2.textContent = "\u2003";
+          pantalla3.textContent = "\u2003";
           pantalla4.textContent = "Cantidad a depositar: ";
-          pantalla5.textContent = "\u2003";
+          pantalla5.textContent = "$ ";
           pantalla5.insertAdjacentHTML(
             "beforeend",
-            '<input id="input" type="text">'
+            '<input id="input" type="text" style="width: 80px;">'
           );
           pantalla6.textContent = "\u2003";
           pantalla6.insertAdjacentHTML(
             "beforeend",
-            '<button id="btn-deposito" class="btn btn-primary">Depositar</button>'
+            '<button id="btn-deposito" class="btn btn-danger">Depositar</button>'
           );
           pantalla7.textContent = "\u2003";
           pantalla8.textContent = "\u2003";
@@ -168,16 +216,34 @@ iniciarSesion.addEventListener("click", function () {
               console.log("SaldoActual: " + saldo);
               localStorage.setItem(cuentas[persona].nombre, saldo); //keyname , keyvalue
 
+              pantalla1.style.color = "white";
+              pantalla2.style.color = "white";
+              pantalla3.style.color = "white";
               pantalla4.style.color = "green";
+              pantalla5.style.color = "white";
+              pantalla6.style.color = "yellow";
+              pantalla7.style.color = "white";
+              pantalla8.style.color = "white";
+              pantalla9.style.color = "white";
 
-              pantalla1.textContent = "\u2003";
-              pantalla2.textContent = "\u2003";
-              pantalla3.textContent =
+              pantalla1.style.fontSize = "15px";
+              pantalla2.style.fontSize = "15px";
+              pantalla3.style.fontSize = "15px";
+              pantalla4.style.fontSize = "50px";
+              pantalla5.style.fontSize = "20px";
+              pantalla6.style.fontSize = "20px";
+              pantalla7.style.fontSize = "15px";
+              pantalla8.style.fontSize = "15px";
+              pantalla9.style.fontSize = "15px";
+
+              pantalla1.textContent =
                 "CuentaActual: " +
                 cuentas[persona].nombre +
                 " " +
                 "Saldo: " +
                 saldo;
+              pantalla3.textContent = "\u2003";
+              pantalla2.textContent = "\u2003";
               pantalla4.textContent = "Transferencia exitosa!";
               pantalla5.textContent = "Monto ingresado: " + deposito;
               pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
@@ -186,13 +252,121 @@ iniciarSesion.addEventListener("click", function () {
               pantalla9.textContent = "\u2003";
             }
           });
-          pantalla4.style.color = "white";
+        });
+
+        retiro.addEventListener("click", function () {
+          pantalla1.style.color = "white";
+          pantalla2.style.color = "white";
+          pantalla3.style.color = "white";
+          pantalla4.style.color = "red";
+          pantalla5.style.color = "white";
+          pantalla6.style.color = "white";
           pantalla7.style.color = "white";
+          pantalla8.style.color = "white";
+          pantalla9.style.color = "white";
+
+          pantalla1.style.fontSize = "15px";
+          pantalla2.style.fontSize = "15px";
+          pantalla3.style.fontSize = "15px";
+          pantalla4.style.fontSize = "30px";
+          pantalla5.style.fontSize = "20px";
+          pantalla6.style.fontSize = "15px";
+          pantalla7.style.fontSize = "15px";
+          pantalla8.style.fontSize = "15px";
+          pantalla9.style.fontSize = "15px";
+
+          pantalla1.textContent =
+            "CuentaActual: " +
+            cuentas[persona].nombre +
+            " " +
+            "Saldo: " +
+            saldo;
+          pantalla2.textContent = "\u2003";
+          pantalla3.textContent = "\u2003";
+          pantalla4.textContent = "Cantidad a retirar: ";
+          pantalla5.textContent = "$ ";
+          pantalla5.insertAdjacentHTML(
+            "beforeend",
+            '<input id="input" type="number" style="width: 80px;">'
+          );
+          pantalla6.textContent = "\u2003";
+          pantalla6.insertAdjacentHTML(
+            "beforeend",
+            '<button id="btn-retiro" class="btn btn-danger">Retirar</button>'
+          );
+          pantalla7.textContent = "\u2003";
+          pantalla8.textContent = "\u2003";
+          pantalla9.textContent = "\u2003";
+
+          let btnRetiro = document.getElementById("btn-retiro");
+          let input = document.getElementById("input");
+          let deposito = 0;
+
+          btnRetiro.addEventListener("click", function () {
+            // console.log(isNaN(input.value));
+            if (isNaN(input.value) == true) {
+              pantalla7.style.color = "red";
+              pantalla7.textContent = "Ingrese un numero valido";
+              // console.log("Es String");
+            } else {
+              // console.log("Es Numero");
+              // console.log(
+              //   "SaldoAnterior: " +
+              //     cuentas[persona].saldo +
+              //     "typeof: " +
+              //     typeof cuentas[persona].saldo
+              // );
+              deposito = Number(input.value);
+              // console.log(
+              //   "Cantidad depositada: " + cantidad + "typeof: " + typeof cantidad
+              // );
+
+              saldo = saldo - deposito; //Usar getItem(keyname) aqui
+              console.log("SaldoActual: " + saldo);
+              localStorage.setItem(cuentas[persona].nombre, saldo); //keyname , keyvalue
+
+              pantalla1.style.color = "white";
+              pantalla2.style.color = "white";
+              pantalla3.style.color = "white";
+              pantalla4.style.color = "green";
+              pantalla5.style.color = "white";
+              pantalla6.style.color = "yellow";
+              pantalla7.style.color = "white";
+              pantalla8.style.color = "white";
+              pantalla9.style.color = "white";
+
+              pantalla1.style.fontSize = "15px";
+              pantalla2.style.fontSize = "15px";
+              pantalla3.style.fontSize = "15px";
+              pantalla4.style.fontSize = "50px";
+              pantalla5.style.fontSize = "20px";
+              pantalla6.style.fontSize = "20px";
+              pantalla7.style.fontSize = "15px";
+              pantalla8.style.fontSize = "15px";
+              pantalla9.style.fontSize = "15px";
+
+              pantalla1.textContent =
+                "CuentaActual: " +
+                cuentas[persona].nombre +
+                " " +
+                "Saldo: " +
+                saldo;
+              pantalla3.textContent = "\u2003";
+              pantalla2.textContent = "\u2003";
+              pantalla4.textContent = "Retiro exitoso!";
+              pantalla5.textContent = "Monto retirado: " + deposito;
+              pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
+              pantalla7.textContent = "\u2003";
+              pantalla8.textContent = "\u2003";
+              pantalla9.textContent = "\u2003";
+            }
+          });
         });
 
         break;
       } else {
         // pantalla7.style.color = "white";
+        pantalla7.style.color = "red";
         pantalla7.textContent = "Intentar de nuevo";
       }
     } else {
