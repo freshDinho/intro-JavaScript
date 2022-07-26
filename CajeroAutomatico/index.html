@@ -9,18 +9,17 @@
         integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
-<body>
-    <div class="container-fluid border p-5 mt-5 bg-light flex-row-reverse">
-        <div class="row border border-danger py-5 bg-secondary d-flex flex-md-wrap justify-content-center ">
-            <div class="col-2 p-2 bg-secondary border border-danger">
-                <button type="button" class="col-12 mb-3 my-5 btn btn-dark btn-lg text-center">-</button>
+<body class="d-flex justify-content-center flex-column" style="height: 100vh">
+    <div class="container border p-5 bg-light flex-row-reverse">
+        <div class="row border border-danger p-5 bg-secondary">
+            <div class="col-lg-2 p-2 bg-secondary border border-danger d-flex justify-content-center flex-column">
                 <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
                 <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
-                <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center" id="cerrarSesion">-</button>
+                <button type="button" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
+                <button type="button" class="col-12 btn btn-dark btn-lg text-center" id="cerrarSesion">-</button>
             </div>
-            <div class="col-7 p-3 bg-secondary border border-danger" style="height: 700px;"
-                class="col-12 bg-light border border-danger">
-                <div class="col-12 p-3 mt-4 border text-center" style="height: 600px;">
+            <div class="col-lg-8 p-3 bg-secondary border border-danger" class="col-12 bg-light border border-danger">
+                <div class="col-12 p-3 border text-center">
                     <div id="Pantalla1"></div>
                     <div id="Pantalla2"></div>
                     <div id="Pantalla3" style="font-size: 50px;" ;">Inicia Sesion</div>
@@ -32,21 +31,19 @@
                     </div>
                     <div id="Pantalla6">
                         <button type="button" id="iniciar-sesion"" class=" col-3 mb-3 btn btn-primary text-center"
-                            style="width: 180px; height: 40px; font-size: 19px;">Iniciar
-                            sesion</button>
+                            style="width: 180px; height: 40px; font-size: 19px;">Iniciar sesion</button>
                     </div>
                     <div id="Pantalla7"></div>
                     <div id="Pantalla8"></div>
                     <div id="Pantalla9"></div>
                 </div>
-                </>
             </div>
-            <div class="col-2 p-2 bg-secondary border border-danger">
-                <button type="button" id="retiro" class="col-12 mb-3 mt-5 btn btn-dark btn-lg text-center">-</button>
+            <div class="col-lg-2 p-2 bg-secondary border border-danger d-flex justify-content-center flex-column">
+                <button type="button" id="retiro" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
                 <button type="button" id="deposito" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
                 <button type="button" id="consultar" class="col-12 mb-3 btn btn-dark btn-lg text-center">-</button>
                 <button type="button" id="BorrarLocalStorage"
-                    class="col-12 mb-3 btn btn-dark btn-lg text-center">BorrarLocalStorage</button>
+                    class="col-12 btn btn-dark btn-lg text-center">BorrarLocalStorage</button>
             </div>
         </div>
     </div>

@@ -85,6 +85,105 @@ iniciarSesion.addEventListener("click", function () {
         pantalla8.textContent = "";
         pantalla9.textContent = "";
 
+        consultar.addEventListener("click", function () {
+          console.log("Persona: " + persona);
+          pantalla3.style.fontSize = "30px";
+          pantalla4.style.fontSize = "30px";
+          pantalla4.style.color = "white";
+
+          pantalla1.textContent = "\u2003";
+          pantalla2.textContent = "\u2003";
+          pantalla3.textContent =
+            "CuentaActual: " +
+            cuentas[persona].nombre +
+            " " +
+            "Saldo: " +
+            saldo;
+          pantalla4.textContent = "Saldo Actual: " + saldo;
+          pantalla5.textContent = "";
+          pantalla6.textContent = "";
+          pantalla7.textContent = "";
+          pantalla8.textContent = "";
+          pantalla9.textContent = "";
+        });
+
+        deposito.addEventListener("click", function () {
+          pantalla3.style.fontSize = "30px";
+          pantalla4.style.fontSize = "30px";
+
+          // let input = document.createElement("input");
+          pantalla1.textContent = "\u2003";
+          pantalla2.textContent = "\u2003";
+          pantalla3.textContent =
+            "CuentaActual: " +
+            cuentas[persona].nombre +
+            " " +
+            "Saldo: " +
+            saldo;
+          pantalla4.textContent = "Cantidad a depositar: ";
+          pantalla5.textContent = "";
+          pantalla5.insertAdjacentHTML(
+            "beforeend",
+            '<input id="input" type="text">'
+          );
+          pantalla6.textContent = "";
+          pantalla6.insertAdjacentHTML(
+            "beforeend",
+            '<button id="btn-deposito" class="btn btn-primary">Depositar</button>'
+          );
+          pantalla7.textContent = "";
+          pantalla8.textContent = "";
+          pantalla9.textContent = "";
+
+          let btnDeposito = document.getElementById("btn-deposito");
+          let input = document.getElementById("input");
+          let deposito = 0;
+
+          btnDeposito.addEventListener("click", function () {
+            // console.log(isNaN(input.value));
+            if (isNaN(input.value) == true) {
+              pantalla7.style.color = "red";
+              pantalla7.textContent = "Ingrese un numero valido";
+              // console.log("Es String");
+            } else {
+              // console.log("Es Numero");
+              // console.log(
+              //   "SaldoAnterior: " +
+              //     cuentas[persona].saldo +
+              //     "typeof: " +
+              //     typeof cuentas[persona].saldo
+              // );
+              deposito = Number(input.value);
+              // console.log(
+              //   "Cantidad depositada: " + cantidad + "typeof: " + typeof cantidad
+              // );
+
+              saldo = saldo + deposito; //Usar getItem(keyname) aqui
+              console.log("SaldoActual: " + saldo);
+              localStorage.setItem(cuentas[persona].nombre, saldo); //keyname , keyvalue
+
+              pantalla4.style.color = "green";
+
+              pantalla1.textContent = "\u2003";
+              pantalla2.textContent = "\u2003";
+              pantalla3.textContent =
+                "CuentaActual: " +
+                cuentas[persona].nombre +
+                " " +
+                "Saldo: " +
+                saldo;
+              pantalla4.textContent = "Transferencia exitosa!";
+              pantalla5.textContent = "Monto ingresado: " + deposito;
+              pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
+              pantalla7.textContent = "";
+              pantalla8.textContent = "";
+              pantalla9.textContent = "";
+            }
+          });
+          pantalla4.style.color = "white";
+          pantalla7.style.color = "white";
+        });
+
         break;
       } else {
         // pantalla7.style.color = "white";
@@ -99,101 +198,17 @@ iniciarSesion.addEventListener("click", function () {
   console.log("SaldoDentro: " + saldo);
 });
 
-consultar.addEventListener("click", function () {
-  console.log("Persona: " + persona);
-  pantalla3.style.fontSize = "30px";
-  pantalla4.style.fontSize = "30px";
-  pantalla4.style.color = "white";
-
-  pantalla1.textContent = "\u2003";
-  pantalla2.textContent = "\u2003";
-  pantalla3.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
-  pantalla4.textContent = "Saldo Actual: " + saldo;
-  pantalla5.textContent = "";
-  pantalla6.textContent = "";
-  pantalla7.textContent = "";
-  pantalla8.textContent = "";
-  pantalla9.textContent = "";
-});
-
-deposito.addEventListener("click", function () {
-  pantalla3.style.fontSize = "30px";
-  pantalla4.style.fontSize = "30px";
-
-  // let input = document.createElement("input");
-  pantalla1.textContent = "\u2003";
-  pantalla2.textContent = "\u2003";
-  pantalla3.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
-  pantalla4.textContent = "Cantidad a depositar: ";
-  pantalla5.textContent = "";
-  pantalla5.insertAdjacentHTML("beforeend", '<input id="input" type="text">');
-  pantalla6.textContent = "";
-  pantalla6.insertAdjacentHTML(
-    "beforeend",
-    '<button id="btn-deposito" class="btn btn-primary">Depositar</button>'
-  );
-  pantalla7.textContent = "";
-  pantalla8.textContent = "";
-  pantalla9.textContent = "";
-
-  let btnDeposito = document.getElementById("btn-deposito");
-  let input = document.getElementById("input");
-  let deposito = 0;
-
-  btnDeposito.addEventListener("click", function () {
-    // console.log(isNaN(input.value));
-    if (isNaN(input.value) == true) {
-      pantalla7.style.color = "red";
-      pantalla7.textContent = "Ingrese un numero valido";
-      // console.log("Es String");
-    } else {
-      // console.log("Es Numero");
-      // console.log(
-      //   "SaldoAnterior: " +
-      //     cuentas[persona].saldo +
-      //     "typeof: " +
-      //     typeof cuentas[persona].saldo
-      // );
-      deposito = Number(input.value);
-      // console.log(
-      //   "Cantidad depositada: " + cantidad + "typeof: " + typeof cantidad
-      // );
-
-      saldo = saldo + deposito; //Usar getItem(keyname) aqui
-      console.log("SaldoActual: " + saldo);
-      localStorage.setItem(cuentas[persona].nombre, saldo); //keyname , keyvalue
-
-      pantalla4.style.color = "green";
-
-      pantalla1.textContent = "\u2003";
-      pantalla2.textContent = "\u2003";
-      pantalla3.textContent =
-        "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
-      pantalla4.textContent = "Transferencia exitosa!";
-      pantalla5.textContent = "Monto ingresado: " + deposito;
-      pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
-      pantalla7.textContent = "";
-      pantalla8.textContent = "";
-      pantalla9.textContent = "";
-    }
-  });
-  pantalla4.style.color = "white";
-  pantalla7.style.color = "white";
-});
-
 btnBorrar.addEventListener("click", function () {
-  localStorage.clear();
-  pantalla1.textContent = "";
-  pantalla2.textContent = "";
-  pantalla3.textContent = "";
-  pantalla4.textContent = "";
-  pantalla5.textContent = "";
-  pantalla6.textContent = "";
-  pantalla7.textContent = "";
-  pantalla8.textContent = "";
-  pantalla9.textContent = "";
+  // localStorage.clear();
+  // pantalla1.textContent = "";
+  // pantalla2.textContent = "";
+  // pantalla3.textContent = "";
+  // pantalla4.textContent = "";
+  // pantalla5.textContent = "";
+  // pantalla6.textContent = "";
+  // pantalla7.textContent = "";
+  // pantalla8.textContent = "";
+  // pantalla9.textContent = "";
 });
 
 cerrarSesion.addEventListener("click", function () {
