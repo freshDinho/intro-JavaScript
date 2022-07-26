@@ -15,6 +15,10 @@ let consultar = document.getElementById("consultar");
 let iniciarSesion = document.getElementById("iniciar-sesion");
 let cerrarSesion = document.getElementById("cerrarSesion");
 
+retiro.disabled = true;
+deposito.disabled = true;
+consultar.disabled = true;
+
 let btnBorrar = document.getElementById("BorrarLocalStorage");
 
 // var cuentas = [
@@ -57,7 +61,9 @@ iniciarSesion.addEventListener("click", function () {
         console.log(
           "Datos-Persona: " + cuentas[i].nombre + " " + cuentas[i].password
         );
-
+        retiro.disabled = false;
+        deposito.disabled = false;
+        consultar.disabled = false;
         persona = i;
         saldo = Number(localStorage.getItem(cuentas[persona].nombre));
         console.log("Persona: " + persona);
