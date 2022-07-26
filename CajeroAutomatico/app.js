@@ -181,7 +181,7 @@ cerrarSesion.addEventListener("click", function () {
   pantalla6.textContent = "";
   pantalla6.insertAdjacentHTML(
     "beforeend",
-    '<button id="btnIniciarSesion2" class="btn btn-danger">Iniciar sesion</button>'
+    '<button type="button" id="iniciar-sesion" class=" col-3 mb-3 btn btn-danger text-center"style="width: 180px; height: 40px; font-size: 19px">Iniciar sesion</button>'
   );
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "\u2003";
