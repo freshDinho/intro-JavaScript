@@ -18,8 +18,7 @@ let cerrarSesion = document.getElementById("cerrarSesion");
 retiro.disabled = true;
 deposito.disabled = true;
 consultar.disabled = true;
-
-let btnBorrar = document.getElementById("BorrarLocalStorage");
+cerrarSesion.disabled = true;
 
 // var cuentas = [
 //   { nombre: "Mali", password: 1234, saldo: 200 },
@@ -64,6 +63,7 @@ iniciarSesion.addEventListener("click", function () {
         retiro.disabled = false;
         deposito.disabled = false;
         consultar.disabled = false;
+        cerrarSesion.disabled = false;
         persona = i;
         saldo = Number(localStorage.getItem(cuentas[persona].nombre));
         console.log("Persona: " + persona);
@@ -202,19 +202,6 @@ iniciarSesion.addEventListener("click", function () {
   }
   console.log("Persona: " + persona);
   console.log("SaldoDentro: " + saldo);
-});
-
-btnBorrar.addEventListener("click", function () {
-  // localStorage.clear();
-  // pantalla1.textContent = "";
-  // pantalla2.textContent = "";
-  // pantalla3.textContent = "";
-  // pantalla4.textContent = "";
-  // pantalla5.textContent = "";
-  // pantalla6.textContent = "";
-  // pantalla7.textContent = "";
-  // pantalla8.textContent = "";
-  // pantalla9.textContent = "";
 });
 
 cerrarSesion.addEventListener("click", function () {
