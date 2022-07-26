@@ -81,15 +81,15 @@ iniciarSesion.addEventListener("click", function () {
         pantalla5.style.fontSize = "15px";
 
         pantalla1.textContent = "Bienvenido!" + " " + username;
-        pantalla2.textContent = "";
+        pantalla2.textContent = "\u2003";
         pantalla3.textContent =
           "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
         pantalla4.textContent = "¿Que quieres hacer?";
         pantalla5.textContent = "selecciona alguna de las opciones en pantalla";
-        pantalla6.textContent = "";
-        pantalla7.textContent = "";
-        pantalla8.textContent = "";
-        pantalla9.textContent = "";
+        pantalla6.textContent = "\u2003";
+        pantalla7.textContent = "\u2003";
+        pantalla8.textContent = "\u2003";
+        pantalla9.textContent = "\u2003";
 
         consultar.addEventListener("click", function () {
           console.log("Persona: " + persona);
@@ -106,11 +106,11 @@ iniciarSesion.addEventListener("click", function () {
             "Saldo: " +
             saldo;
           pantalla4.textContent = "Saldo Actual: " + saldo;
-          pantalla5.textContent = "";
-          pantalla6.textContent = "";
-          pantalla7.textContent = "";
-          pantalla8.textContent = "";
-          pantalla9.textContent = "";
+          pantalla5.textContent = "\u2003";
+          pantalla6.textContent = "\u2003";
+          pantalla7.textContent = "\u2003";
+          pantalla8.textContent = "\u2003";
+          pantalla9.textContent = "\u2003";
         });
 
         deposito.addEventListener("click", function () {
@@ -127,19 +127,19 @@ iniciarSesion.addEventListener("click", function () {
             "Saldo: " +
             saldo;
           pantalla4.textContent = "Cantidad a depositar: ";
-          pantalla5.textContent = "";
+          pantalla5.textContent = "\u2003";
           pantalla5.insertAdjacentHTML(
             "beforeend",
             '<input id="input" type="text">'
           );
-          pantalla6.textContent = "";
+          pantalla6.textContent = "\u2003";
           pantalla6.insertAdjacentHTML(
             "beforeend",
             '<button id="btn-deposito" class="btn btn-primary">Depositar</button>'
           );
-          pantalla7.textContent = "";
-          pantalla8.textContent = "";
-          pantalla9.textContent = "";
+          pantalla7.textContent = "\u2003";
+          pantalla8.textContent = "\u2003";
+          pantalla9.textContent = "\u2003";
 
           let btnDeposito = document.getElementById("btn-deposito");
           let input = document.getElementById("input");
@@ -181,9 +181,9 @@ iniciarSesion.addEventListener("click", function () {
               pantalla4.textContent = "Transferencia exitosa!";
               pantalla5.textContent = "Monto ingresado: " + deposito;
               pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
-              pantalla7.textContent = "";
-              pantalla8.textContent = "";
-              pantalla9.textContent = "";
+              pantalla7.textContent = "\u2003";
+              pantalla8.textContent = "\u2003";
+              pantalla9.textContent = "\u2003";
             }
           });
           pantalla4.style.color = "white";
