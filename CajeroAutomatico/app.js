@@ -20,6 +20,11 @@ deposito.disabled = true;
 consultar.disabled = true;
 cerrarSesion.disabled = true;
 
+retiro.style.visibility = "hidden";
+deposito.style.visibility = "hidden";
+consultar.style.visibility = "hidden";
+cerrarSesion.style.visibility = "hidden";
+
 // var cuentas = [
 //   { nombre: "Mali", password: 1234, saldo: 200 },
 //   { nombre: "Gera", password: 4321, saldo: 290 },
@@ -64,6 +69,12 @@ iniciarSesion.addEventListener("click", function () {
         deposito.disabled = false;
         consultar.disabled = false;
         cerrarSesion.disabled = false;
+
+        retiro.style.visibility = "visible";
+        deposito.style.visibility = "visible";
+        consultar.style.visibility = "visible";
+        cerrarSesion.style.visibility = "visible";
+
         persona = i;
         saldo = Number(localStorage.getItem(cuentas[persona].nombre));
         console.log("Persona: " + persona);
