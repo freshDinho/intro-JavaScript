@@ -1,0 +1,65 @@
+body {
+  font-family: "PT Sans", sans-serif;
+}
+#container-teclado {
+  display: flex;
+  justify-content: center;
+}
+
+#teclado {
+  width: 13%;
+  height: 16%;
+}
+
+#pantalla-general {
+  /* background-image: url(anuncio_Banorte2.jpg); */
+  /* background-image: url(anuncio_Banorte.jpg); */
+
+  background: rgb(175, 175, 175);
+  background: linear-gradient(
+    0deg,
+    rgba(175, 175, 175, 1) 0%,
+    rgba(215, 215, 215, 1) 100%
+  );
+}
+#lateral-izq {
+  background-image: url(anuncio_Banorte3.png);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-size: cover; */
+  background-position: center;
+  /* background-attachment: fixed; */
+}
+
+#lateral-Der {
+  background-image: url(anuncio_Banorte2.jpg);
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  /* background-size: cover; */
+  background-position: center;
+  /* background-attachment: fixed; */
+}
+
+button {
+  font-size: 19px;
+  background: rgb(230, 2, 2);
+  background: linear-gradient(
+    0deg,
+    rgba(230, 2, 2, 1) 0%,
+    rgba(60, 0, 0, 1) 100%
+  );
+}
+
+#BarraAbajo {
+  background: rgb(230, 2, 2);
+  background: linear-gradient(
+    0deg,
+    rgba(230, 2, 2, 1) 0%,
+    rgba(60, 0, 0, 1) 100%
+  );
+}
+
+#logo-Banorte {
+  height: 100%;
+  width: 23%;
+}

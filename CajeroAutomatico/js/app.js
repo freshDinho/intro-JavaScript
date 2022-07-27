@@ -172,12 +172,8 @@ cerrarSesion.addEventListener("click", function () {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent = "";
+  pantalla1.textContent = "\u2003";
   // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
-  pantalla1.insertAdjacentHTML(
-    "beforeend",
-    '<img src="Logo_Banorte_con_nombre.png" alt="Logo Banco" id="logo-Banorte">'
-  );
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "Inicia Sesion";
   pantalla4.textContent = "";
@@ -359,7 +355,7 @@ deposito.addEventListener("click", function () {
   pantalla6.textContent = "\u2003";
   pantalla6.insertAdjacentHTML(
     "beforeend",
-    '<button id="btn-deposito" class="btn btn-danger">Depositar</button>'
+    '<button id="btn-deposito" class="btn">Depositar</button>'
   );
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "\u2003";
@@ -495,7 +491,7 @@ retiro.addEventListener("click", function () {
   pantalla6.textContent = "\u2003";
   pantalla6.insertAdjacentHTML(
     "beforeend",
-    '<button id="btn-retiro" class="btn btn-danger">Retirar</button>'
+    '<button id="btn-retiro" class="btn">Retirar</button>'
   );
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "\u2003";
