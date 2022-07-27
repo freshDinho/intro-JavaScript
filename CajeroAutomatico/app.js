@@ -45,7 +45,15 @@ const cuentas = [
 console.log(window.localStorage);
 
 let persona = 0;
+let saldoDecimal = 0;
 let saldo = 0;
+
+if (saldoDecimal % 1 == 0) {
+  //entero
+} else {
+  //decimal
+  saldo = Number.parseFloat(saldoDecimal).toFixed(2);
+}
 
 iniciarSesion.addEventListener("click", function () {
   // console.log(username, password);
@@ -164,8 +172,12 @@ cerrarSesion.addEventListener("click", function () {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent = "\u2003";
+  pantalla1.textContent = "";
   // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.insertAdjacentHTML(
+    "beforeend",
+    '<img src="Logo_Banorte_con_nombre.png" alt="Logo Banco" id="logo-Banorte">'
+  );
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "Inicia Sesion";
   pantalla4.textContent = "";
@@ -181,12 +193,14 @@ cerrarSesion.addEventListener("click", function () {
   pantalla6.textContent = "";
   pantalla6.insertAdjacentHTML(
     "beforeend",
-    '<button type="button" id="iniciar-sesion" class=" col-3 mb-3 btn btn-danger text-center"style="width: 180px; height: 40px; font-size: 19px">Iniciar sesion</button>'
+    '<button id="btnIniciarSesion2" class="col-3 mb-3 btn text-center" style="width: 180px; height: 40px; font-size: 19px;">Iniciar sesion</button>'
   );
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "\u2003";
   pantalla9.textContent = "\u2003";
 
+  let username = document.getElementById("username").value;
+  let password = document.getElementById("password").value;
   let btnIniciarSesion = document.getElementById("btnIniciarSesion2");
 
   btnIniciarSesion.addEventListener("click", function () {
@@ -281,7 +295,7 @@ consultar.addEventListener("click", function () {
   pantalla1.style.color = "white";
   pantalla2.style.color = "white";
   pantalla3.style.color = "white";
-  pantalla4.style.color = "red";
+  pantalla4.style.color = "yellow";
   pantalla5.style.color = "white";
   pantalla6.style.color = "white";
   pantalla7.style.color = "white";
@@ -302,7 +316,7 @@ consultar.addEventListener("click", function () {
     "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
-  pantalla4.textContent = "Saldo Actual: " + saldo;
+  pantalla4.textContent = "Tu saldo actual es de: " + "$" + saldo;
   pantalla5.textContent = "\u2003";
   pantalla6.textContent = "\u2003";
   pantalla7.textContent = "\u2003";
@@ -405,7 +419,7 @@ deposito.addEventListener("click", function () {
         pantalla2.textContent = "\u2003";
         pantalla4.textContent = "Transferencia fallida!";
         pantalla5.textContent = "La cuenta ya alcanzo su limite de saldo";
-        pantalla6.textContent = "Saldo Total: " + saldo;
+        pantalla6.textContent = "Saldo Total: " + "$" + saldo;
         pantalla7.textContent = "\u2003";
         pantalla8.textContent = "\u2003";
         pantalla9.textContent = "\u2003";
@@ -437,8 +451,8 @@ deposito.addEventListener("click", function () {
         pantalla3.textContent = "\u2003";
         pantalla2.textContent = "\u2003";
         pantalla4.textContent = "Transferencia exitosa!";
-        pantalla5.textContent = "Monto ingresado: " + deposito;
-        pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
+        pantalla5.textContent = "Monto ingresado: " + "$" + deposito;
+        pantalla6.textContent = "Nuevo Saldo Total: " + "$" + saldo;
         pantalla7.textContent = "\u2003";
         pantalla8.textContent = "\u2003";
         pantalla9.textContent = "\u2003";
@@ -543,7 +557,7 @@ retiro.addEventListener("click", function () {
         pantalla4.textContent = "Retiro fallido!";
         pantalla5.textContent =
           "Tu cuenta no cuenta con el saldo suficiente para retirar";
-        pantalla6.textContent = "Saldo Total: " + saldo;
+        pantalla6.textContent = "Saldo: " + "$" + saldo;
         pantalla7.textContent = "\u2003";
         pantalla8.textContent = "\u2003";
         pantalla9.textContent = "\u2003";
@@ -576,7 +590,7 @@ retiro.addEventListener("click", function () {
         pantalla3.textContent = "\u2003";
         pantalla4.textContent = "Retiro exitoso!";
         pantalla5.textContent = "Monto retirado: " + retiro;
-        pantalla6.textContent = "Nuevo Saldo Total: " + saldo;
+        pantalla6.textContent = "Nuevo Saldo Total: " + "$" + saldo;
         pantalla7.textContent = "\u2003";
         pantalla8.textContent = "\u2003";
         pantalla9.textContent = "\u2003";
