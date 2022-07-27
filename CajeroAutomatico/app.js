@@ -77,8 +77,8 @@ function pantalla_Bienvenida(persona, saldo) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "Bienvenido!" + " " + cuentas[persona].nombre;
   pantalla4.textContent = "¿Que quieres hacer?";
@@ -160,8 +160,8 @@ function PantallaConsultar(persona, saldo) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Tu saldo actual es de: " + "$" + saldo;
@@ -198,8 +198,8 @@ function pantalla_depositar(persona, saldo) {
   pantalla9.style.fontSize = "15px";
 
   // let input = document.createElement("input");
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "\u2003";
   pantalla4.textContent = "Cantidad a depositar: ";
@@ -243,8 +243,8 @@ function pantalla_TransferenciaFallida(persona, saldo) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Transferencia fallida!";
@@ -280,8 +280,8 @@ function pantalla_TranferenciaExitosa(persona, saldo, deposito) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Transferencia exitosa!";
@@ -317,8 +317,8 @@ function pantalla_Retirar(persona, saldo) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "\u2003";
   pantalla4.textContent = "Cantidad a retirar: ";
@@ -362,8 +362,8 @@ function pantalla_retiroFallido(persona, saldo) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Retiro fallido!";
@@ -400,8 +400,8 @@ function pantalla_retiroExitoso(persona, saldo, retiro) {
   pantalla8.style.fontSize = "15px";
   pantalla9.style.fontSize = "15px";
 
-  pantalla1.textContent =
-    "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
+  pantalla1.textContent = "\u2003";
+  // "CuentaActual: " + cuentas[persona].nombre + " " + "Saldo: " + saldo;
   pantalla2.textContent = "\u2003";
   pantalla3.textContent = "\u2003";
   pantalla4.textContent = "Retiro exitoso!";
