@@ -512,11 +512,13 @@ consultar.addEventListener("click", function () {
 });
 
 deposito.addEventListener("click", function () {
+  desaparecer_Botones();
   pantalla_depositar(persona, saldo);
 
   let btnRegresar = document.getElementById("btn-regresar");
 
   btnRegresar.addEventListener("click", function () {
+    aparecer_Botones();
     pantalla_Bienvenida(persona, saldo);
   });
 
@@ -557,6 +559,7 @@ deposito.addEventListener("click", function () {
           let btnRegresar = document.getElementById("btn-regresar");
 
           btnRegresar.addEventListener("click", function () {
+            aparecer_Botones();
             pantalla_Bienvenida(persona, saldo);
           });
         } else {
@@ -568,6 +571,7 @@ deposito.addEventListener("click", function () {
           let btnRegresar = document.getElementById("btn-regresar");
 
           btnRegresar.addEventListener("click", function () {
+            aparecer_Botones();
             pantalla_Bienvenida(persona, saldo);
           });
         }
@@ -577,10 +581,12 @@ deposito.addEventListener("click", function () {
 });
 
 retiro.addEventListener("click", function () {
+  desaparecer_Botones();
   pantalla_Retirar(persona, saldo);
   let btnRegresar = document.getElementById("btn-regresar");
 
   btnRegresar.addEventListener("click", function () {
+    aparecer_Botones();
     pantalla_Bienvenida(persona, saldo);
   });
 
@@ -622,6 +628,7 @@ retiro.addEventListener("click", function () {
           let btnRegresar = document.getElementById("btn-regresar");
 
           btnRegresar.addEventListener("click", function () {
+            aparecer_Botones();
             pantalla_Bienvenida(persona, saldo);
           });
         } else {
@@ -632,6 +639,7 @@ retiro.addEventListener("click", function () {
           let btnRegresar = document.getElementById("btn-regresar");
 
           btnRegresar.addEventListener("click", function () {
+            aparecer_Botones();
             pantalla_Bienvenida(persona, saldo);
           });
         }
