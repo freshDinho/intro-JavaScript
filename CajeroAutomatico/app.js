@@ -543,7 +543,7 @@ deposito.addEventListener("click", function () {
       // );
       deposito = Number(input.value);
 
-      if (deposito == 0) {
+      if (deposito <= 0) {
         Intentar_De_Nuevo();
         input.value = "";
       } else {
@@ -611,7 +611,7 @@ retiro.addEventListener("click", function () {
       // );
       retiro = Number(input.value);
       //Solucion al ingresar cero en el input
-      if (retiro == 0) {
+      if (retiro <= 0) {
         Intentar_De_Nuevo();
         input.value = "";
       } else {
