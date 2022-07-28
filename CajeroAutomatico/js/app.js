@@ -15,6 +15,9 @@ let consultar = document.getElementById("consultar");
 let iniciarSesion = document.getElementById("iniciar-sesion");
 let cerrarSesion = document.getElementById("cerrarSesion");
 
+let persona = 0;
+let saldo = 0;
+
 // var cuentas = [
 //   { nombre: "Mali", password: 1234, saldo: 200 },
 //   { nombre: "Gera", password: 4321, saldo: 290 },
@@ -414,10 +417,6 @@ function pantalla_retiroExitoso(persona, saldo, retiro) {
   );
   pantalla9.textContent = "\u2003";
 }
-
-let persona = 0;
-let saldoDecimal = 0;
-let saldo = 0;
 
 desaparecer_Botones();
 
