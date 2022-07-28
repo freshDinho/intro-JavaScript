@@ -1,3 +1,4 @@
+//Declaracion de elementos del html
 let pantalla1 = document.getElementById("Pantalla1");
 let pantalla2 = document.getElementById("Pantalla2");
 let pantalla3 = document.getElementById("Pantalla3");
@@ -15,27 +16,29 @@ let consultar = document.getElementById("consultar");
 let iniciarSesion = document.getElementById("iniciar-sesion");
 let cerrarSesion = document.getElementById("cerrarSesion");
 
+//variables a utilizar
 let persona = 0;
 let saldo = 0;
 
-// var cuentas = [
-//   { nombre: "Mali", password: 1234, saldo: 200 },
-//   { nombre: "Gera", password: 4321, saldo: 290 },
-//   { nombre: "Maui", password: 0000, saldo: 67 },
+// const cuentas_storage = [
+//   { nombre: "Mali", saldo: 200 },
+//   { nombre: "Gera", saldo: 290 },
+//   { nombre: "Maui", saldo: 67 },
 // ];
+
+//SUBIR AL STORAGE
+// for (let i = 0; i < cuentas_storage.length; i++) {
+//   localStorage.setItem(cuentas_storage[i].nombre, cuentas_storage[i].saldo);
+// }
 
 const cuentas = [
   { nombre: "Mali", password: 1234 },
   { nombre: "Gera", password: 4321 },
   { nombre: "Maui", password: 0000 },
 ];
-
-//SUBIR AL STORAGE
-// for (let i = 0; i < cuentas.length; i++) {
-//   localStorage.setItem(cuentas[i].nombre, cuentas[i].saldo);
-// }
-
+//muestra el Storage en consola
 console.log(window.localStorage);
+//declaracion de funciones a utilizar
 function desaparecer_Botones() {
   retiro.disabled = true;
   deposito.disabled = true;
@@ -418,11 +421,13 @@ function pantalla_retiroExitoso(persona, saldo, retiro) {
   pantalla9.textContent = "\u2003";
 }
 
+//Comienza el codigo
 desaparecer_Botones();
 
 iniciarSesion.addEventListener("click", function () {
   // console.log(username, password);
 
+  //iterando el arreglo de objetos
   for (let i = 0; i < cuentas.length; i++) {
     // console.log(
     //   "Usuario:" +
@@ -430,28 +435,37 @@ iniciarSesion.addEventListener("click", function () {
     //     "password:" +
     //     cuentas[persona].password
     // );
+
+    //Guardando los valores de los inputs
     let username = document.getElementById("username").value;
     let password = document.getElementById("password").value;
 
+    //comparando valores con el arreglo de objetos
     if (username == cuentas[i].nombre) {
       if (password == cuentas[i].password) {
         console.log(
           "Datos-Persona: " + cuentas[i].nombre + " " + cuentas[i].password
         );
-
+        //accede al cajero
+        //aparece los botones
         aparecer_Botones();
-
+        //Guarda el numero del arreglo en la variable persona
         persona = i;
+        //Obtiene el saldo del storage
         saldo = Number(localStorage.getItem(cuentas[persona].nombre));
         console.log("Persona: " + persona);
         console.log("SaldoDentro: " + saldo);
+        //imprime pantalla de Bienvenida
         pantalla_Bienvenida(persona, saldo);
+        //Rompe la interacion
         break;
       } else {
         // pantalla7.style.color = "white";
+        //imprime pantalla la advertencia de intentar de nuevo
         Intentar_De_Nuevo();
       }
     } else {
+      //imprime pantalla la advertencia de intentar de nuevo
       Intentar_De_Nuevo();
     }
   }
@@ -467,7 +481,6 @@ cerrarSesion.addEventListener("click", function () {
   let btnIniciarSesion = document.getElementById("btnIniciarSesion2");
 
   btnIniciarSesion.addEventListener("click", function () {
-    console.log("si funciono");
     for (let i = 0; i < cuentas.length; i++) {
       let username = document.getElementById("username").value;
       let password = document.getElementById("password").value;
@@ -523,12 +536,15 @@ deposito.addEventListener("click", function () {
   let btnDeposito = document.getElementById("btn-deposito");
   let input = document.getElementById("input");
   let deposito = 0;
+  //variable para recuperar el saldo anterior
   let saldoTotal = 0;
 
   btnDeposito.addEventListener("click", function () {
     // console.log(isNaN(input.value));
+    //sentencia para saber si no es un numero
     if (isNaN(input.value) == true) {
       Intentar_De_Nuevo();
+      //limpia el valor del input para que no se quede el valor anterior
       input.value = "";
       // console.log("Es String");
     } else {
@@ -540,7 +556,7 @@ deposito.addEventListener("click", function () {
       //     typeof cuentas[persona].saldo
       // );
       deposito = Number(input.value);
-
+      //Solucion al ingresar cero o negativo en el input
       if (deposito <= 0) {
         Intentar_De_Nuevo();
         input.value = "";
@@ -608,7 +624,7 @@ retiro.addEventListener("click", function () {
       //     typeof cuentas[persona].saldo
       // );
       retiro = Number(input.value);
-      //Solucion al ingresar cero en el input
+      //Solucion al ingresar cero o negativo en el input
       if (retiro <= 0) {
         Intentar_De_Nuevo();
         input.value = "";
