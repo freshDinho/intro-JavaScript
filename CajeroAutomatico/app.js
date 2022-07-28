@@ -248,7 +248,7 @@ function pantalla_TransferenciaFallida(persona, saldo) {
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Transferencia fallida!";
-  pantalla5.textContent = "La cuenta ya alcanzo su limite de saldo";
+  pantalla5.textContent = "No puedes tener mas de $990 pesos en tu cuenta";
   pantalla6.textContent = "Saldo Total: " + "$" + saldo;
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "";
@@ -367,8 +367,7 @@ function pantalla_retiroFallido(persona, saldo) {
   pantalla3.textContent = "\u2003";
   pantalla2.textContent = "\u2003";
   pantalla4.textContent = "Retiro fallido!";
-  pantalla5.textContent =
-    "Tu cuenta no cuenta con el saldo suficiente para retirar";
+  pantalla5.textContent = "No puedes tener menos de $10 pesos en tu cuenta";
   pantalla6.textContent = "Saldo: " + "$" + saldo;
   pantalla7.textContent = "\u2003";
   pantalla8.textContent = "";
