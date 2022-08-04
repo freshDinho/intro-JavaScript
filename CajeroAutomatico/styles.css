@@ -23,7 +23,7 @@ body {
   );
 }
 #lateral-izq {
-  background-image: url(/img/anuncio_Banorte3.png);
+  background-image: url(anuncio_Banorte3.png);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* background-size: cover; */
@@ -32,7 +32,7 @@ body {
 }
 
 #lateral-Der {
-  background-image: url(/img/anuncio_Banorte2.jpg);
+  background-image: url(anuncio_Banorte2.jpg);
   background-repeat: no-repeat;
   background-size: 100% 100%;
   /* background-size: cover; */
